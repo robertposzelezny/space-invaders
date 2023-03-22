@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:gra"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize">
-    <Canvas x:Name="main_canvas" Height="570" Width="790" Background="Black" Focusable="True" KeyDown="keyDown" KeyUp="keyUp">
+    <Canvas x:Name="main_canvas" Height="570" Width="790" Focusable="True" KeyDown="keyDown" KeyUp="keyUp">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/images/wallpaper.gif"/>
+        </Canvas.Background>
         <Rectangle Name="playerRectangle" Height="34" Canvas.Left="350" Stroke="Black" Canvas.Top="504" Width="58">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="images/player.png"/>

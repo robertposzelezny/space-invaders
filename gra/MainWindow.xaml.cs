@@ -91,7 +91,7 @@ namespace gra
                 timer.Stop();
                 drawMenu();
             }
-            if (!main_canvas.Children.OfType<Rectangle>().Where(rectangle=>(string)rectangle.Tag == "enemy").Any())
+            else if (!main_canvas.Children.OfType<Rectangle>().Where(rectangle=>(string)rectangle.Tag == "enemy").Any())
             {
                 stage += 1;
                 switch (stage)
@@ -304,7 +304,7 @@ namespace gra
                         drawScore();
                     }
                 }
-                if(Canvas.GetTop(bullet) + bullet.Height >= windowHeight)
+                if(Canvas.GetTop(bullet) + bullet.Height <= 0)
                     toRemove.Add(bullet);
             }
             foreach(var trash in toRemove)
